@@ -1,0 +1,56 @@
+<%- include('layouts/header')%>
+
+
+
+    <!--main-->
+    <div class="main">
+        
+
+        
+        <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        
+        <div class="contForm">
+            <div class="container2">
+                <div class="header">
+                    <h2>Agregar Entrada</h2>
+                </div>
+                <form id="formen" class="form" method="post" action="/add/entrada">
+                    <div class="form-control">
+                        <label for="idpro">Id Producto</label>
+                        <select name="idpro" id="idpro">
+                            
+                            <%- include('layouts/pro-entradas')%>
+                        </select>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="precio">Precio</label>
+                        <input step="any" type="number" placeholder="Q 00" id="precio" name="precio"/>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="cant">Cantidad</label>
+                        <input type="number" placeholder="12" id="cant" name="cantidad"/>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="prov">Id Proveedor</label>
+                        <select name="idprov" id="prov">
+                            
+                            <%- include('layouts/prove-entradas')%>
+                        </select>
+                    </div>
+
+                    <input type="submit" value="Guardar" class="btn-form">
+                </form>
+            </div>
+        </div>
+
+</div>
+
+<script src="/js/scripts4.js"></script>
+
+
+<%- include('layouts/footer')%>

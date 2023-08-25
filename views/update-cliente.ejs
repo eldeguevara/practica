@@ -1,0 +1,40 @@
+<%- include('layouts/header')%>
+
+
+<!--main-->
+<div class="main">
+
+    <div class="toggle">
+        <ion-icon name="menu-outline"></ion-icon>
+    </div>
+    <div class="contForm">
+        <div class="container2">
+            <div class="header">
+                <h2>Editar cliente</h2>
+            </div>
+            <form id="form" class="form" method="post" action="/cliente/update/<%= clientes.id_cliente %>">
+                <div class="form-control">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" placeholder="nombrecliente" id="nombre" name="nombre" value="<%= clientes.nombre_cliente %>"/>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="telefono">Telefono</label>
+                    <input type="number" placeholder="1232-3232" id="telefono" name="telefono"  value="<%= clientes.telefono_cliente %>"/>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="nit">NIT</label>
+                    <input type="number" placeholder="6546546-5" id="nit" name="nit" value="<%= clientes.nit %>"/>
+                    <small>Error message</small>
+                </div>
+                
+                <input type="submit" value="Guardar" class="btn-form">
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+<%- include('layouts/footer')%>

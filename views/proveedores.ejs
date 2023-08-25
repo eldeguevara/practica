@@ -1,0 +1,49 @@
+<%- include('layouts/header')%>
+<% 
+            if(mensaje.length==0){
+                alert = ''
+            }else{
+                alert = 'datos almacenados'
+            }
+        %>
+
+<div class="main">
+    <div class="topbar">
+        <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+    </div>
+    <div class="content-customers">
+<!--New customers-->
+<div class="cardHeader">
+    <h2>Proveedores</h2>
+    
+</div>
+
+
+<div class="recentCustomers">
+    
+    
+    <table class="tablex">
+        <thead>
+            <tr>
+                <td><h4>Id Proovedores</h4></td>
+                <td><h4>Nombre Completo</h4></td>
+                <td><h4>Telefono</h4></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <%- include('layouts/datos-prov')%>         
+        </tbody>
+    </table>
+</div>
+</div>
+<%if(mensaje.length>0){%>
+    <div class="alerta hola"><%= mensaje%></div>
+<% } %>
+
+<a href="/add-proveedor" class="agregar-boton"><ion-icon name="add-outline"></ion-icon></a>
+</div>
+<script src="/js/alertas.js"></script>
+<%- include('layouts/footer')%>

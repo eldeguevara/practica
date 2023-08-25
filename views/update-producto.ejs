@@ -1,0 +1,31 @@
+<%- include('layouts/header')%>
+
+<!--main-->
+<div class="main">
+
+    <div class="toggle">
+        <ion-icon name="menu-outline"></ion-icon>
+    </div>
+    <div class="contForm">
+        <div class="container2">
+            <div class="header">
+                <h2>Editar Producto</h2>
+            </div>
+            <form id="form2" class="form" method="post" action="/update/producto/<%= producto.id_producto %>">
+                <div class="form-control">
+                    <label for="nompro">Nombre producto</label>
+                    <input type="text" placeholder="nombreproducto" id="nompro" name="nombre" value="<%= producto.nombre_producto %>"/>
+                    <small>Error message</small>
+                </div>
+               
+                
+                <input type="submit" value="Guardar" class="btn-form">
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script src="/js/scripts2.js"></script>
+
+<%- include('layouts/footer')%>

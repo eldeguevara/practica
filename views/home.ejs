@@ -1,0 +1,52 @@
+
+<%- include('layouts/header')%>
+
+
+
+    <!--main-->
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+        </div>
+
+        <!--cards-->
+        <div class="cardBox">
+            <div class="card">
+                <div>
+                    <div class="numbers"><%= productos.length %></div>
+                    <div class="cardName">Productos</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers"><%= clientes.length %></div>
+                    <div class="cardName">CLientes</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="people-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers"><%= proveedores.length %></div>
+                    <div class="cardName">Proveedores</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="footsteps-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+   
+
+<%- include('layouts/footer')%>
+

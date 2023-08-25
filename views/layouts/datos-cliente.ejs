@@ -1,0 +1,19 @@
+<% for(var i=0;i<cliente.length;i++){%>
+    
+<tr>
+    <td><span><%= cliente[i].id_cliente %></span></td>
+    <td><%= cliente[i].nombre_cliente %><br></td>
+    <td><%= cliente[i].telefono_cliente %></td>
+    <td><%= cliente[i].nit %></td>
+    <td class="content-icon-ser">
+        <div>
+            <a href="/edd-cliente/<%= cliente[i].id_cliente %>"><ion-icon name="pencil-outline" class="pencil"></ion-icon></a>
+        </div>
+        <div>
+            <a href="/cliente/delete/<%= cliente[i].id_cliente %>"><ion-icon name="close-outline" class="delete"></ion-icon></a>
+        </div>
+    </td>
+</tr>
+
+
+<% } %>

@@ -1,0 +1,40 @@
+<%- include('layouts/header')%>
+
+
+
+    <!--main-->
+    <div class="main">
+        
+
+        
+        <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        
+        <div class="contForm">
+            <div class="container2">
+                <div class="header">
+                    <h2>Agregar proveedor</h2>
+                </div>
+                <form id="form3" class="form" method="post" action="/update/provedor/<%= provedor.id_provedores %>">
+                    <div class="form-control">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" placeholder="nombreproveedor" id="nom" name="nombre" value="<%= provedor.nombre_provedor %>"/>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="telefono">Telefono</label>
+                        <input type="number" placeholder="1232-3232" id="tel" name="telefono" value="<%= provedor.telefono_provedor %>"/>
+                        <small>Error message</small>
+                    </div>
+                    <input type="submit" value="Guardar" class="btn-form">
+                </form>
+            </div>
+        </div>
+
+</div>
+
+<script src="/js/scripts3.js"></script>
+
+
+<%- include('layouts/footer')%>

@@ -1,0 +1,17 @@
+<% for(var i=0;i<entradas.length;i++){%>
+    
+    <tr>
+        <td><span><%= entradas[i].id_producto %></span></td>
+        <td><%= entradas[i].precio %><br></td>
+        <td><%= entradas[i].cantidad %><br></td>
+        <td><%= entradas[i].id_proveedor %><br></td>
+        <td><%= entradas[i].total %><br></td>
+        <td class="content-icon-ser">
+            <div>
+                <a href="/delete/entrada/<%= entradas[i].id_entrada %>"><ion-icon name="close-outline" class="delete"></ion-icon></a>
+            </div>
+        </td>
+    </tr>
+    
+    
+    <% } %>
